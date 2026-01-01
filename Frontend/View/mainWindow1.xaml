@@ -1,0 +1,35 @@
+﻿<Window x:Class="Frontend.View.mainWindow1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Frontend.View"
+        mc:Ignorable="d"
+        Title="mainWindow1" MinHeight="450" MinWidth="800" SizeToContent="Manual">
+
+    <Viewbox Stretch="Uniform" Margin="0,0,0,1">
+        <Grid Width="611" Height="302">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Height="184" >
+                <Border CornerRadius="12" Padding="16" Margin="0,0,0,20" Background="#FF6AA1E5">
+                    <TextBlock Text="Welcome to KANBAN BOARD!!"
+                       FontSize="32"
+                       FontWeight="Bold"
+                       Foreground="Black"
+                       HorizontalAlignment="Center"/>
+                </Border>
+                <Button Content="REGISTER"
+                        Padding="10,5"
+                        Margin="0,0,0,20"
+                        Width="215"
+                        Click="Register_Click"
+                        HorizontalAlignment="Center"/>
+
+                <Button Content="LOGIN"
+                        Padding="10,5"
+                        Width="215"
+                        Click="Login_Click"
+                        HorizontalAlignment="Center"/>
+            </StackPanel>
+        </Grid>
+    </Viewbox>
+</Window>

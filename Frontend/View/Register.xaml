@@ -1,0 +1,33 @@
+﻿<Window x:Class="Frontend.View.Register"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Frontend.View"
+        mc:Ignorable="d"
+        Title="Register" Height="303" Width="408" MinHeight="300" MinWidth="400">
+    <Viewbox Margin="0,-1,0,1">
+        <Grid Margin="0,0,-2,0">
+            <StackPanel Margin="10" >
+                <Label Content="Welcome" />
+                <Grid Margin="0,10,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Label Content="Username:" Grid.Row="0" Grid.Column="0" />
+                    <TextBox Grid.Row="0" Grid.Column="1" Margin="5,5,1,5" Text="{Binding Path=Username, Mode=OneWayToSource}" TextChanged="TextBox_TextChanged" />
+                    <Label Content="Password:" Grid.Row="1" Grid.Column="0" />
+                    <TextBox Grid.Row="1" Grid.Column="1" Margin="5,5,0,5" Text="{Binding Path=Password, Mode=OneWayToSource}" HorizontalAlignment="Left" Width="145" />
+                </Grid>
+                <Button Content="Register" Width="100" Margin="0,10,0,0" Click="Register_Click" />
+                <Button Content="Back" Width="100" Click="Back_Click" />
+                <Label Margin="0,10,0,0" Content="{Binding Path=ErrorMessage, Mode=OneWay}" />
+            </StackPanel>
+        </Grid>
+    </Viewbox>
+</Window>
